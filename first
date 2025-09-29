@@ -1,3 +1,6 @@
+#desarrollo de aplicación destinada al uso diaro en granjas de postura de huevos
+#se busca tener caracteristicas de contabilidad, predicciones de posturas y clasificación de producción
+
 class TipoHuevo:
     def __init__(self, tamaño, peso, precio, fecha):
         self.tamaño = tamaño
