@@ -1,0 +1,13 @@
+class TipoHuevo:
+    def __init__(self, tamaño, peso, precio, fecha):
+        self.tamaño = tamaño
+        self.peso = peso
+        self.precio = precio
+        self.fecha = fecha
+        
+
+huevo1 = TipoHuevo("AAA","67", "800", "10/9/2025")
+huevo2 = TipoHuevo("AA","58", "700", "10/9/2025")
+huevo3 = TipoHuevo("A","53", "600", "10/9/2025")
+
+print(huevo1.tamaño)
