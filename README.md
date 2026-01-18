@@ -8,4 +8,6 @@ llevar una gestion contable donde se cumpla con las regulaciones de colombia en 
 - Gestion de ventas, productos, clientes y proveedores.
 - Generación de facturación pos y electronica
 - Generación de reportes
+- Control de stock
+- Alertas personalizadas
 - Compatibilidad con los servicios de la Dian
