@@ -6,30 +6,49 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
+<body>    
     <div class="container__wrapper">
-        <header class="content__header">
-            <input type="text" placeholder="Search">
-        </header>
+        <div class="container__nav-wrapper">
+            <header class="container__header">
+
+                <img src="img/favicon-32x32.png" alt="logo">
+
+                <form class="container__header-form " role="search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-search">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M21 21l-6 -6" />
+                    </svg>
+
+                    <input required type="text" placeholder="Search">
+
+                    <button disabled type="submit">Buscar</button>
+                </form>
+            
+            </header>
+        </div>
+        
 
         <div class="content__wrapper">
-          <aside>
-            <header>
-                <h2>Mercados D&D</h2>
-                <span>Admin console</span>
-                <nav>
-                    <a href="#">Inicio</a>
-                    <a href="#">Productos</a>
-                    <a href="#">Clientes</a>
-                    <a href="#">Ventas</a>
-                    <a href="#">Facturación</a>
-                </nav>
-            </header>
-            <footer>
-                <a href="#">Settings</a>
-                <a href="#">Perfil</a>
-            </footer>
+
+            <aside>
+                <header>
+                    <h2>Mercados D&D</h2>
+                    <span>Admin console</span>
+                    <nav>
+                        <a href="#">Inicio</a>
+                        <a href="#">Productos</a>
+                        <a href="#">Clientes</a>
+                        <a href="#">Ventas</a>
+                        <a href="#">Facturación</a>
+                    </nav>
+                </header>
+                <footer>
+                    <a href="#">Settings</a>
+                    <a href="#">Perfil</a>
+                </footer>
             </aside>
 
             <main>
@@ -62,9 +81,7 @@
                     </div>
                 </footer>
             </main>  
-        </div>
-
-        
+        </div>        
     </div>
 
 
