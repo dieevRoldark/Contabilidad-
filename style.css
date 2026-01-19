@@ -60,8 +60,32 @@ body, div, header, footer, aside, nav, span, article {
 .content__wrapper {
     display: flex;
     flex-direction: row;
+    height: 90vh
 }
 
+/* ---- SECCIÒN NAVBAR ASIDE---- */
 
+.content__aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0.5;
+    margin: 9px;
+}
 
+.content__nav {
+    display: flex;
+    flex-direction: column;
 
+    a {
+        text-decoration: none;
+        padding: 10px;
+    }
+}
+
+.main__content {
+    flex: 2;
+}
+/* ----  NAVBAR ASIDE ENDS ---- */
+
+/* ---- SECCIÒN DASHBOAR ENDS---- */
