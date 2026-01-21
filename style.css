@@ -377,4 +377,14 @@ body, html {
 
 /* ----  SECCIÒN MAIN ENDS ---- */
 
+
+.main__header-button {
+    &.is-applied {
+        pointer-events: visible;
+        background-color: #c8d4f0;
+
+    }
+}
+
+
 /* ----  ANIMACIONES ---- */
