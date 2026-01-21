@@ -7,50 +7,46 @@ body, div, header, footer, aside, nav, span, article {
     padding: 0;
 }
 
-body {
+body, html {
     font-family: sans-serif;
+    overflow: hidden
 }
 
 :root {
-            --font-family: 'Segoe UI', system-ui, sans-serif;
-            --primary: #2563eb;
-            --primary-dark: #1e298afa;
-            --primary-hover: #3b82f6;
-            --primary-light: #f0efff9f;
-            --background: #f8fafc;
-            --text-primary: #0f172a;
-            --text-secondary: #475569;
-            --text-muted: #94a3b8;
-            --border: #e2e8f0;
-            --card-bg: #ffffff;
-            --shadow: 0 4px 6px -1px rgba(6, 75, 122, 0.09);
-            --input-bg: #ffffff;
+    --font-family: roboto, sans-serif;
+    --primary: #2563eb;
+    --primary-dark: #1e298afa;
+    --primary-hover: #3b82f6;
+    --primary-light: #f0efff9f;
+    --background: #f8fafc;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --border: #e2e8f0;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 6px -1px rgba(6, 75, 122, 0.09);
+    --input-bg: #ffffff;
 }
 
 [data-theme="dark"] {
-            --primary: #6366f1;
-            --primary-dark: #4338ca;
-            --primary-hover: #818cf8;
-            --primary-light: rgba(99, 102, 241, 0.2);
-            --background: #0f172a;
-            --text-primary: #f8fafc;
-            --text-secondary: #cbd5e1;
-            --text-muted: #64748b;
-            --border: #334155;
-            --card-bg: #1e293b;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
-            --input-bg: #0f172a;
-        }
+    --primary: #6366f1;
+    --primary-dark: #4338ca;
+    --primary-hover: #818cf8;
+    --primary-light: rgba(99, 102, 241, 0.2);
+    --background: #0f172a;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #64748b;
+    --border: #334155;
+    --card-bg: #1e293b;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+    --input-bg: #0f172a;
+
+}
 
 
 /* 
 
-small {
-        color: var(--text-muted);
-        font-size: 0.875rem;
-    }
-
-*/
 
 /* ---- SECCIÒN HEADER NAVSEARCH ---- */
 
@@ -58,7 +54,6 @@ small {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 100vh;
 }
 
 .container__nav-wrapper {
@@ -102,6 +97,10 @@ small {
         padding: 5px;
     }
 
+    input:focus {
+        outline: none;
+    }
+
     button {
         color: var(--input-bg);
         font-size: 0.7rem;
@@ -117,6 +116,16 @@ small {
     
     svg {
         color: #000000;
+        border: 1px solid var(--card-bg);
+        padding: 4px;
+
+    }
+
+    svg:hover {
+        border: 1px solid var(--border);
+        border-radius: 99999px;
+        background-color: #00000017;
+
     }
 }
 
@@ -131,6 +140,7 @@ small {
     flex-direction: row;
     margin: 0;
     padding: 0;
+    max-height: 100vh;
 }
 
 /* ---- DASHBOAR WRAPPER ENDS ---- */
@@ -143,10 +153,11 @@ small {
     background-color: var(--card-bg);
     flex: 0.45;
     border-right: 0.1px solid #2222223d;
+    height: 680px;
 }
 
 .content__header-nav {
-    margin-left: 25px;
+
     height: 100%;
     color: var(--text-primary);
     font-size: 0.98rem;
@@ -155,27 +166,43 @@ small {
         padding: 3px 0px;
         margin: 0;
         margin-top: 20px;
+        margin-left: 25px;
         font-weight: bold;
     }
+}
 
-    span {
-        color: var(--text-secondary);
-    } 
+.content__header-nav > span {
+    color: var(--text-secondary);
+    margin-left: 25px;
 }
 
 .content__nav {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+    gap: 5px;
+
+    svg {
+        margin-left: 10px;
+    }
 
     a {
         text-decoration: none;
-        padding: 13px 0px;
-        
+        padding: 10px 0;
+        width: 250px;
+        margin-left: 15px;
+        gap: 3px;
 
         span {
             color: #000000b7;
         }
+    }
+
+    a:hover {
+        background-color: #00000017;
+        border-radius: 5px;
+
+
     }
 }
 
@@ -183,12 +210,13 @@ small {
     display: flex;
     align-items: center;
     gap: 4px;
+    padding-left: 30px;
 }
+
 
 .content__nav-footer {
     display: flex;
     flex-direction: column;
-    margin-left: 22px;
     border-top: 1px solid var(--border);
 
     small {
@@ -314,3 +342,5 @@ small {
 }
 
 /* ----  SECCIÒN MAIN ENDS ---- */
+
+/* ----  ANIMACIONES ---- */
