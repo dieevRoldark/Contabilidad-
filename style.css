@@ -16,7 +16,7 @@ body, html {
     --font-family: roboto, sans-serif;
     --primary: #2563eb;
     --primary-dark: #1e298afa;
-    --primary-hover: #3b82f6;
+    --primary-hover: #3b83f6b2;
     --primary-light: #f0efff9f;
     --background: #f8fafc;
     --text-primary: #0f172a;
@@ -377,11 +377,14 @@ body, html {
 
 /* ----  SECCIÒN MAIN ENDS ---- */
 
+/* ----  SECCIÒN BOTTON JAVASCRIPT---- */
+
 
 .main__header-button {
     &.is-applied {
         pointer-events: visible;
-        background-color: #c8d4f0;
+        background-color: var(--primary-hover);
+        color: #000000;
 
     }
 }
