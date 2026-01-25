@@ -1,12 +1,12 @@
 # D&D Market
 
 <p>
-El desarrollo de D&D Market nace de las necesidades de pequeñeas y mediañas empresas en 
-llevar una gestion contable donde se cumpla con las regulaciones de colombia en cuanto a tributación y facturación. Para este fin la demo incial debe contar con:
+El desarrollo de D&D Market nace de las necesidades de pequeñas y medianas empresas en llevar una gestión contable donde se cumpla con las regulaciones de Colombia en cuanto a tributación y facturación.
+Para este fin la demo inicial debe contar con:
 </p>
 
-- Gestion de ventas, productos, clientes y proveedores.
-- Generación de facturación pos y electronica
+- Gestión de ventas, productos, clientes y proveedores.
+- Generación de facturación post y electrónica.
 - Generación de reportes
 - Control de stock
 - Alertas personalizadas
