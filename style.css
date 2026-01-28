@@ -9,8 +9,10 @@ body, div, header, footer, aside, nav, span, article {
 
 body, html {
     font-family: sans-serif;
-    overflow: hidden
+    overflow: hidden;
+    height: 100vh;
 }
+
 
 :root {
     --font-family: roboto, sans-serif;
@@ -53,7 +55,7 @@ body, html {
 .container__wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    min-height: 100vh;
 }
 
 .container__nav-wrapper {
@@ -140,7 +142,7 @@ body, html {
     flex-direction: row;
     margin: 0;
     padding: 0;
-    max-height: 100vh;
+    height: 100vh;
 }
 
 /* ---- DASHBOAR WRAPPER ENDS ---- */
@@ -153,7 +155,7 @@ body, html {
     background-color: var(--card-bg);
     flex: 0.45;
     border-right: 0.1px solid #2222223d;
-    height: 680px;
+    max-height: 94vh;
 }
 
 .content__header-nav {
@@ -253,7 +255,6 @@ body, html {
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: center;
 }
 
 .main__header {
@@ -315,6 +316,7 @@ body, html {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     margin: 0px 17px 0px 17px;
+    min-height: 77vh;
 }
 
 .main__card-footer {
