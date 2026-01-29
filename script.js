@@ -74,8 +74,111 @@ const rutas = {
                     </footer> 
                 </div>`,
 
-  productos: `<h2>Productos</h2><p>Aquí puedes editar tu información.</p>`,
-  clientes: `<h2>Clientes</h2><p>Aquí puedes editar tu información.</p>`,
+  productos: `<div class="main__productos-wrapper">
+
+                    <header>
+                        <h2> Productos</h2>
+                        <p>Puedes gestionar tus productos desde el sigueinte panel</p>
+
+                        <div>
+                           
+                            <button type="submit">Nuevo producto</button>
+                        </div>
+                    </header>
+
+                    <footer>
+
+                        <div>
+                            <table>
+                                <caption>
+                                    Información de productos
+                                </caption>
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col" >Codigo</th>
+                                        <th scope="col" >Nombre</th>
+                                        <th scope="col" >Iva</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Codigo">001</td>
+                                        <td data-label="Nombre">Producto A</td>
+                                        <td data-label="Iva">16%</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Codigo">002</td>
+                                        <td data-label="Nombre">Producto B</td>
+                                        <td data-label="Iva">8%</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Codigo">003</td>
+                                        <td data-label="Nombre">Producto C</td>
+                                        <td data-label="Iva">0%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+
+                    </footer>
+
+
+                </div>`,
+  clientes: `<div class="main__productos-wrapper">
+
+                    <header>
+                        <h2>Clientes</h2>
+                        <p>Puedes gestionar tus clientes desde el sigueinte panel</p>
+
+                        <div>                           
+                            <button type="submit">Nuevo Cliente</button>
+                        </div>
+                    </header>
+
+                    <footer>
+
+                        <div>
+                            <table>
+                                <caption>
+                                    Información de cliente
+                                </caption>
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col" >Codigo</th>
+                                        <th scope="col" >Nombre</th>
+                                        <th scope="col" >Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Codigo">001</td>
+                                        <td data-label="Nombre">Doris Amparo</td>
+                                        <td data-label="estado">aviable</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Codigo">002</td>
+                                        <td data-label="Nombre">Diego Alejandro</td>
+                                        <td data-label="Iva">aviable</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Codigo">003</td>
+                                        <td data-label="Nombre">Maria adaljiza</td>
+                                        <td data-label="Iva">aviable</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+
+                    </footer>
+
+
+                </div>`,
   ventas: `<h2>ventas</h2><p>Aquí puedes editar tu información.</p>`,
   facturacion: `<h2>facturación</h2><p>Aquí puedes editar tu información.</p>`,
   configuracion: `<h2>Configuración</h2><p>Opciones de configuración del sistema.</p>`,
