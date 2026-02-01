@@ -16,7 +16,7 @@ Tener en cuenta!!! = Para recuperar todos los elementos usamos Queryselectorall
 
 
 
-//Primeros pasos en el uso de HTML dinamica
+//Primeros pasos en el uso de HTML dinamico
 //Seccion Main
 
 const rutas = {
@@ -76,11 +76,13 @@ const rutas = {
 
   productos: `<div class="main__productos-wrapper">
 
-                    <header>
-                        <h2> Productos</h2>
-                        <p>Puedes gestionar tus productos desde el sigueinte panel</p>
+                    <header class="main__header-producto">
+                        <div class="main__header-desc">
+                            <h2> Productos</h2>
+                            <p>Puedes gestionar tus productos desde el sigueinte panel</p>
+                        </div>
 
-                        <div>
+                        <div class="main__producto-button">
                            
                             <button type="submit">Nuevo producto</button>
                         </div>
