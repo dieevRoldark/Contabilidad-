@@ -9,7 +9,6 @@ body, div, header, footer, aside, nav, span, article {
 
 body, html {
     font-family: sans-serif;
-    overflow: hidden;
     height: 100vh;
 }
 
@@ -52,7 +51,7 @@ body, html {
 .container__wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    max-height: 100vh;
 }
 
 .container__nav-wrapper {
@@ -150,7 +149,7 @@ body, html {
     display: flex;
     flex-direction: column;
     background-color: var(--card-bg);
-    flex: 0.45;
+    min-width: 283px;
     border-right: 0.1px solid #2222223d;
     max-height: 94vh;
 }
@@ -393,15 +392,9 @@ body, html {
 /* SECCION DE STYLOS PARA LOS LINKS ASIDE */
 
 
-/* PRODUCTOS */
-
-
-.main__productos-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
-.main__header-producto {
+/* La clase main__header-all se creo para reutilizar el estilo de las
+  descripciones de todos los links aside*/
+.main__header-all {
     margin-left: 35px;
     display: flex;
     flex-direction: row;
@@ -420,15 +413,45 @@ body, html {
         margin: 19px 0;
 
     }
-}
 
-.main__header-desc {
+    .main__header-desc {
     flex: 1;
 }
+}
 
 
+/* PRODUCTOS */
 
 
+.main__productos-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__button-cont{
+    margin-right: 35px;
+}
+
+.main__producto-button {
+    padding: 7px;
+    border: 2px solid var(--primary-hover);
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: #fff;
+    box-shadow: var(--shadow);
+}
+
+
+.footer__table-cont{
+    background-color: var(--card-bg);
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    text-align: center;
+    border: 2px solid var(--border);
+    border-radius: 9px;
+
+}
 
 /* EDN SECCION DE STYLOS PARA LOS LINKS ASIDE */
 

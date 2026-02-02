@@ -76,15 +76,85 @@ const rutas = {
 
   productos: `<div class="main__productos-wrapper">
 
-                    <header class="main__header-producto">
+                    <header class="main__header-all">
                         <div class="main__header-desc">
                             <h2> Productos</h2>
                             <p>Puedes gestionar tus productos desde el sigueinte panel</p>
                         </div>
 
-                        <div class="main__producto-button">
+                        <div class="main__button-cont">
                            
-                            <button type="submit">Nuevo producto</button>
+                            <button class="main__producto-button" type="submit">Nuevo producto</button>
+                        </div>
+                    </header>
+
+                    <footer>
+
+                        <div class="footer__table-cont">
+                            <table>
+                                <caption>
+                                    Información de productos
+                                </caption>
+
+                                <thead>
+                                    <tr>
+                                        <th scope="col" >Codigo</th>
+                                        <th scope="col" >Nombre</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col" >Iva</th>
+                                        <th scope="col">Precio + iva</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Codigo">001</td>
+                                        <td data-label="Nombre">Arroz roa x 500gr</td>
+                                        <td data-label="Precio">$20.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$23.20</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Codigo">002</td>
+                                        <td data-label="Nombre">Frijol lima superoriente x 500</td>
+                                        <td data-label="Precio">$30.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$34.80</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Codigo">003</td>
+                                        <td data-label="Nombre">Aceite superoriente x200ml</td>
+                                        <td data-label="Precio">$50.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$58.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Codigo">004</td>
+                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+
+
+                    </footer>
+
+
+                </div>`,
+
+  proveedores: `<div>
+
+                    <header class="main__header-all">
+                        <div class="main__header-desc">
+                            <h2> Proveedores</h2>
+                            <p>Puedes gestionar tus proveedores desde el sigueinte panel</p>
+                        </div>
+
+                        <div>                           
+                            <button type="submit">Nuevo proveedor</button>
                         </div>
                     </header>
 
@@ -93,7 +163,7 @@ const rutas = {
                         <div>
                             <table>
                                 <caption>
-                                    Información de productos
+                                    Información de Proveedores
                                 </caption>
 
                                 <thead>
@@ -126,17 +196,18 @@ const rutas = {
 
 
                     </footer>
-
-
                 </div>`,
-  clientes: `<div class="main__productos-wrapper">
+  clientes: `<div>
 
-                    <header>
-                        <h2>Clientes</h2>
-                        <p>Puedes gestionar tus clientes desde el sigueinte panel</p>
+                    <header class="main__header-all">
+                        <div class="main__header-desc">
+                            <h2>Clientes</h2>
+                            <p>Puedes gestionar tus clientes desde el sigueinte panel</p>
+                        </div>
 
-                        <div>                           
-                            <button type="submit">Nuevo Cliente</button>
+                        <div>
+                           
+                            <button type="submit">Nuevo cliente</button>
                         </div>
                     </header>
 
@@ -181,8 +252,34 @@ const rutas = {
 
 
                 </div>`,
-  ventas: `<h2>ventas</h2><p>Aquí puedes editar tu información.</p>`,
-  facturacion: `<h2>facturación</h2><p>Aquí puedes editar tu información.</p>`,
+  ventas: `<div>
+                <header class="main__header-all">
+                        <div class="main__header-desc">
+                            <h2>Ventas</h2>
+                            <p>Puedes gestionar tus ventas desde el sigueinte panel</p>
+                        </div>
+
+                        <div>
+                           
+                            <button type="submit">Nueva venta</button>
+                        </div>
+                    </header> 
+            </div>  
+  `,
+  facturacion: `<div>
+                <header class="main__header-all">
+                        <div class="main__header-desc">
+                            <h2>Facturación</h2>
+                            <p>Puedes gestionar tus facturas desde el sigueinte panel</p>
+                        </div>
+
+                        <div>                           
+                            <button type="submit">Nueva factura</button>
+                        </div>
+                    </header>
+  
+  
+            </div>`,
   configuracion: `<h2>Configuración</h2><p>Opciones de configuración del sistema.</p>`,
   perfil: `<h2>Perfil</h2><p>Aquí puedes editar tu información.</p>`,
 };
