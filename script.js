@@ -1,21 +1,3 @@
-
-/*En esta estructura la usar Queryselector solo nos permite RECUPER O
-aplicar los eventos a un solo elemento o en este caso un boton.
-
-const boton = document.querySelector('.main__header-button')
-
-
-boton.addEventListener( 'click', function() {
-    boton.classList.add("is-applied")
-    boton.disabled = true
-})
-
-Tener en cuenta!!! = Para recuperar todos los elementos usamos Queryselectorall
-
-*/
-
-
-
 //Primeros pasos en el uso de HTML dinamico
 //Seccion Main
 
@@ -199,79 +181,81 @@ const rutas = {
 
                                 <thead>
                                     <tr>
-                                        <th scope="col" >Nit</th>
-                                        <th scope="col" >Nombre</th>
-                                        <th scope="col">Precio</th>
-                                        <th scope="col" >Iva</th>
-                                        <th scope="col">Precio + iva</th>
+                                        <th>Nit</th>
+                                        <th>Nombre</th>
+                                        <th>direccion</th>
+                                        <th>Telefono</th>
+                                        <th>Email</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td data-label="Nit">001</td>
-                                        <td data-label="Nombre">Arroz roa x 500gr</td>
-                                        <td data-label="Precio">$20.00</td>
-                                        <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$23.20</td>
+                                        <td data-label="Nit">001-002-003</td>
+                                        <td data-label="Nombre">Servicios Nutresa</td>
+                                        <td data-label="direccion">Cll 20 # 17-10</td>
+                                        <td data-label="Telefono">31209344</td>
+                                        <td data-label="Email">servicions@ejemplo.com</td>
                                     </tr>
                                     <tr>
-                                        <td data-label="Nit">002</td>
-                                        <td data-label="Nombre">Frijol lima superoriente x 500</td>
-                                        <td data-label="Precio">$30.00</td>
-                                        <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$34.80</td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="Nit">003</td>
-                                        <td data-label="Nombre">Aceite superoriente x200ml</td>
-                                        <td data-label="Precio">$50.00</td>
-                                        <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$58.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td data-label="Nit">004</td>
-                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
-                                        <td data-label="Precio">$25.00</td>
-                                        <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$29.00</td>
+                                        <td data-label="Nit">004-005-006</td>
+                                        <td data-label="Nombre">Distribuciones La 40</td>
+                                        <td data-label="direccion">Av 40 # 50-20</td>
+                                        <td data-label="Telefono">31567890</td>
+                                        <td data-label="Email">la40@ejemplo.com</td>
                                     </tr>
 
                                     <tr>
-                                        <td data-label="Nit">005</td>
-                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
-                                        <td data-label="Precio">$25.00</td>
-                                        <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$29.00</td>
+                                        <td data-label="Nit">004-005-006</td>
+                                        <td data-label="Nombre">Distribuciones La 40</td>
+                                        <td data-label="direccion">Av 40 # 50-20</td>
+                                        <td data-label="Telefono">31567890</td>
+                                        <td data-label="Email">la40@ejemplo.com</td>
                                     </tr>
 
                                     <tr>
-                                        <td data-label="Nit">006</td>
-                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
-                                        <td data-label="Precio">$25.00</td>
-                                        <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$29.00</td>
+                                        <td data-label="Nit">004-005-006</td>
+                                        <td data-label="Nombre">Distribuciones La 40</td>
+                                        <td data-label="direccion">Av 40 # 50-20</td>
+                                        <td data-label="Telefono">31567890</td>
+                                        <td data-label="Email">la40@ejemplo.com</td>
                                     </tr>
 
                                     <tr>
-                                        <td data-label="Nit">007</td>
-                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
-                                        <td data-label="Precio">$25.00</td>
-                                        <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$29.00</td>
+                                        <td data-label="Nit">004-005-006</td>
+                                        <td data-label="Nombre">Distribuciones La 40</td>
+                                        <td data-label="direccion">Av 40 # 50-20</td>
+                                        <td data-label="Telefono">31567890</td>
+                                        <td data-label="Email">la40@ejemplo.com</td>
                                     </tr>
 
                                     <tr>
-                                        <td data-label="Nit">008</td>
-                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
-                                        <td data-label="Tipo">$25.00</td>
-                                        <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$29.00</td>
+                                        <td data-label="Nit">004-005-006</td>
+                                        <td data-label="Nombre">Distribuciones La 40</td>
+                                        <td data-label="direccion">Av 40 # 50-20</td>
+                                        <td data-label="Telefono">31567890</td>
+                                        <td data-label="Email">la40@ejemplo.com</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-label="Nit">004-005-006</td>
+                                        <td data-label="Nombre">Distribuciones La 40</td>
+                                        <td data-label="direccion">Av 40 # 50-20</td>
+                                        <td data-label="Telefono">31567890</td>
+                                        <td data-label="Email">la40@ejemplo.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Nit">004-005-006</td>
+                                        <td data-label="Nombre">Distribuciones La 40</td>
+                                        <td data-label="direccion">Av 40 # 50-20</td>
+                                        <td data-label="Telefono">31567890</td>
+                                        <td data-label="Email">la40@ejemplo.com</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </footer>
                 </div>`,
+
   clientes: `<div>
 
                     <header class="main__header-all">
@@ -294,81 +278,63 @@ const rutas = {
 
                                 <thead>
                                     <tr>
-                                        <th scope="col" >Codigo</th>
+                                        <th scope="col" >Cedula</th>
                                         <th scope="col" >Nombre</th>
-                                        <th scope="col">Precio</th>
-                                        <th scope="col" >Iva</th>
-                                        <th scope="col">Precio + iva</th>
+                                        <th scope="col" >Teléfono</th>
+                                        <th scope="col" >Correo</th>
+                                        <th scope="col" >Dirección</th>
                                     </tr>
+                                    
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td data-label="Codigo">001</td>
-                                        <td data-label="Nombre">Arroz roa x 500gr</td>
-                                        <td data-label="Precio">$20.00</td>
-                                        <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$23.20</td>
+                                        <td data-label="Cedula">1234567890</td>
+                                        <td data-label="Nombre">Juan Pérez</td>
+                                        <td data-label="Teléfono">0987654321</td>
+                                        <td data-label="Correo">juan@ejemplo.com</td>
+                                        <td data-label="Dirección">Calle Falsa 123</td>
                                     </tr>
                                     <tr>
-                                        <td data-label="Codigo">002</td>
-                                        <td data-label="Nombre">Frijol lima superoriente x 500</td>
-                                        <td data-label="Precio">$30.00</td>
-                                        <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$34.80</td>
+                                        <td data-label="Cedula">0987654321</td>
+                                        <td data-label="Nombre">María Gómez</td>
+                                        <td data-label="Teléfono">0123456789</td>
+                                        <td data-label="Correo">maria@ejemplo.com</td>
+                                        <td data-label="Dirección">Avenida Siempre Viva 456</td>
                                     </tr>
                                     <tr>
-                                        <td data-label="Codigo">003</td>
-                                        <td data-label="Nombre">Aceite superoriente x200ml</td>
-                                        <td data-label="Precio">$50.00</td>
-                                        <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$58.00</td>
+                                        <td data-label="Cedula">1122334455</td>
+                                        <td data-label="Nombre">Carlos López</td>
+                                        <td data-label="Teléfono">0912345678</td>
+                                        <td data-label="Correo">carlos@ejemplo.com</td>
+                                        <td data-label="Dirección">Boulevard Central 789</td>
                                     </tr>
                                     <tr>
-                                        <td data-label="Codigo">004</td>
-                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
-                                        <td data-label="Precio">$25.00</td>
-                                        <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$29.00</td>
+                                        <td data-label="Cedula">1122334455</td>
+                                        <td data-label="Nombre">Carlos López</td>
+                                        <td data-label="Teléfono">0912345678</td>
+                                        <td data-label="Correo">carlos@ejemplo.com</td>
+                                        <td data-label="Dirección">Boulevard Central 789</td>
                                     </tr>
-
                                     <tr>
-                                        <td data-label="Codigo">005</td>
-                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
-                                        <td data-label="Precio">$25.00</td>
-                                        <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$29.00</td>
+                                        <td data-label="Cedula">1122334455</td>
+                                        <td data-label="Nombre">Carlos López</td>
+                                        <td data-label="Teléfono">0912345678</td>
+                                        <td data-label="Correo">carlos@ejemplo.com</td>
+                                        <td data-label="Dirección">Boulevard Central 789</td>
                                     </tr>
-
                                     <tr>
-                                        <td data-label="Codigo">006</td>
-                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
-                                        <td data-label="Precio">$25.00</td>
-                                        <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$29.00</td>
+                                        <td data-label="Cedula">1122334455</td>
+                                        <td data-label="Nombre">Carlos López</td>
+                                        <td data-label="Teléfono">0912345678</td>
+                                        <td data-label="Correo">carlos@ejemplo.com</td>
+                                        <td data-label="Dirección">Boulevard Central 789</td>
                                     </tr>
-
                                     <tr>
-                                        <td data-label="Codigo">007</td>
-                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
-                                        <td data-label="Precio">$25.00</td>
-                                        <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$29.00</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="Codigo">008</td>
-                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
-                                        <td data-label="Precio">$25.00</td>
-                                        <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$29.00</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="Codigo">009</td>
-                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
-                                        <td data-label="Precio">$25.00</td>
-                                        <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$29.00</td>
+                                        <td data-label="Cedula">1122334455</td>
+                                        <td data-label="Nombre">Carlos López</td>
+                                        <td data-label="Teléfono">0912345678</td>
+                                        <td data-label="Correo">carlos@ejemplo.com</td>
+                                        <td data-label="Dirección">Boulevard Central 789</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -385,10 +351,10 @@ const rutas = {
                         <div class="main__button-cont">                           
                             <button class="main__button-all" type="submit">Nueva venta</button>
                         </div>
-            </div>  
-  `,
+            </div>`,
   facturacion: `<div>
                 <header class="main__header-all">
+
                         <div class="main__header-desc">
                             <h2>Facturación</h2>
                             <p>Puedes gestionar tus facturas desde el sigueinte panel</p>
@@ -415,30 +381,3 @@ function cargarContenido() {
 window.addEventListener("load", cargarContenido);
 window.addEventListener("hashchange", cargarContenido);  
 
-
-
-
-
-//PreventDefault permite cambiar el comportamiento del evento:input
-
-const searchInput = document.querySelector('#input-search')
-
-searchInput.addEventListener('input', function(event) {
-    event.preventDefault()
-    console.log(searchInput.value)
-})
-
-
-//Capturar evento:click dentro del contenedor mediante event 
-//Condicional que captura los botones del contenedor y los cuenta + estilos
-
-const mainSection = document.querySelector('.main__header')
-
-mainSection.addEventListener('click', function(event) {
-    const element = event.target
-
-    if (element.classList.contains('main__header-button')) {
-        element.classList.add("is-applied")
-        element.disabled = true
-    }
-})
