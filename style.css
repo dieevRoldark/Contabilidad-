@@ -27,6 +27,7 @@ body, html {
     --card-bg: #ffffff;
     --shadow: 0 4px 6px -1px rgba(6, 75, 122, 0.09);
     --input-bg: #ffffff;
+    --card-header-bg: #3482db;
 }
 
 [data-theme="dark"] {
@@ -388,8 +389,10 @@ body, html {
     }
 }
 
+/* ----  SECCIÒN BOTTON JAVASCRIPT END---- */
 
-/* SECCION DE STYLOS PARA LOS LINKS ASIDE */
+
+/* SECCION DE STYLOS PARA LOS LINKS ASIDE + "Creando estilo reutilizables"*/
 
 
 /* La clase main__header-all se creo para reutilizar el estilo de las
@@ -398,7 +401,7 @@ body, html {
     margin-left: 35px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: self-end;
 
     h2 {
         color: var(--text-primary);
@@ -426,32 +429,62 @@ body, html {
 .main__productos-wrapper {
     display: flex;
     flex-direction: column;
+
 }
 
 .main__button-cont{
-    margin-right: 35px;
+    margin-right: 219px;
 }
 
-.main__producto-button {
+.main__button-all {
     padding: 7px;
     border: 2px solid var(--primary-hover);
     border-radius: 5px;
     background-color: var(--primary);
     color: #fff;
     box-shadow: var(--shadow);
+    font-weight: 600;
 }
 
+
+
+/*Estilo de tabla de la seccion productos, La cual se esta reutilizando en las demas tablas*/
 
 .footer__table-cont{
-    background-color: var(--card-bg);
-    width: 500px;
+    width: 800px;
     height: 500px;
     margin: auto;
-    text-align: center;
-    border: 2px solid var(--border);
-    border-radius: 9px;
+
+
+    .footer__table {
+        width: 100%;
+        height: 100%;
+        border-collapse: collapse;
+        text-align: center;
+        background-color: var(--card-bg);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border: 2px solid  transparent;
+        border-radius: 5px;
+
+        .footer__table-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding: 30px;
+        }
+
+        thead {
+            background-color: var(--card-header-bg);
+            color:  #fff;
+            line-height: 2.5;           
+        }
+    }
+
+    th, td {
+        border-bottom: 1px solid var(--border);
+    }
 
 }
+
 
 /* EDN SECCION DE STYLOS PARA LOS LINKS ASIDE */
 

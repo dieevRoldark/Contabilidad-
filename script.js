@@ -79,20 +79,18 @@ const rutas = {
                     <header class="main__header-all">
                         <div class="main__header-desc">
                             <h2> Productos</h2>
-                            <p>Puedes gestionar tus productos desde el sigueinte panel</p>
+                            <p>Puedes gestionar tus productos desde el sigueinte panel.</p>
                         </div>
 
-                        <div class="main__button-cont">
-                           
-                            <button class="main__producto-button" type="submit">Nuevo producto</button>
+                        <div class="main__button-cont">                           
+                            <button class="main__button-all" type="submit">Nuevo producto</button>
                         </div>
                     </header>
 
                     <footer>
-
                         <div class="footer__table-cont">
-                            <table>
-                                <caption>
+                            <table class="footer__table">
+                                <caption class="footer__table-title">
                                     Información de productos
                                 </caption>
 
@@ -134,67 +132,144 @@ const rutas = {
                                         <td data-label="Iva">16%</td>
                                         <td data-label="Precio + iva">$29.00</td>
                                     </tr>
+
+                                    <tr>
+                                        <td data-label="Codigo">005</td>
+                                        <td data-label="Nombre">Chocolate Chocoline x 200</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-label="Codigo">006</td>
+                                        <td data-label="Nombre">Salsa de tomate Bary x200 gr</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-label="Codigo">007</td>
+                                        <td data-label="Nombre">Leche monteFrio x380gr</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-label="Codigo">008</td>
+                                        <td data-label="Nombre">Desodorante Rexona x 60 ml</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-label="Codigo">009</td>
+                                        <td data-label="Nombre">Azucar Morena x 500 gr</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
                                 </tbody>
                             </table>
-
                         </div>
-
-
                     </footer>
-
-
                 </div>`,
 
   proveedores: `<div>
-
                     <header class="main__header-all">
                         <div class="main__header-desc">
                             <h2> Proveedores</h2>
-                            <p>Puedes gestionar tus proveedores desde el sigueinte panel</p>
+                            <p>Puedes gestionar tus proveedores desde el sigueinte panel.</p>
                         </div>
 
-                        <div>                           
-                            <button type="submit">Nuevo proveedor</button>
+                        <div class="main__button-cont">                           
+                            <button class="main__button-all" type="submit">Nuevo proveedor</button>
                         </div>
                     </header>
 
                     <footer>
-
-                        <div>
-                            <table>
-                                <caption>
-                                    Información de Proveedores
+                        <div class="footer__table-cont">
+                            <table class="footer__table">
+                                <caption class="footer__table-title">
+                                    Información de proveedores
                                 </caption>
 
                                 <thead>
                                     <tr>
-                                        <th scope="col" >Codigo</th>
+                                        <th scope="col" >Nit</th>
                                         <th scope="col" >Nombre</th>
+                                        <th scope="col">Precio</th>
                                         <th scope="col" >Iva</th>
+                                        <th scope="col">Precio + iva</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td data-label="Codigo">001</td>
-                                        <td data-label="Nombre">Producto A</td>
+                                        <td data-label="Nit">001</td>
+                                        <td data-label="Nombre">Arroz roa x 500gr</td>
+                                        <td data-label="Precio">$20.00</td>
                                         <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$23.20</td>
                                     </tr>
                                     <tr>
-                                        <td data-label="Codigo">002</td>
-                                        <td data-label="Nombre">Producto B</td>
-                                        <td data-label="Iva">8%</td>
+                                        <td data-label="Nit">002</td>
+                                        <td data-label="Nombre">Frijol lima superoriente x 500</td>
+                                        <td data-label="Precio">$30.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$34.80</td>
                                     </tr>
                                     <tr>
-                                        <td data-label="Codigo">003</td>
-                                        <td data-label="Nombre">Producto C</td>
-                                        <td data-label="Iva">0%</td>
+                                        <td data-label="Nit">003</td>
+                                        <td data-label="Nombre">Aceite superoriente x200ml</td>
+                                        <td data-label="Precio">$50.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$58.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Nit">004</td>
+                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-label="Nit">005</td>
+                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-label="Nit">006</td>
+                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-label="Nit">007</td>
+                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-label="Nit">008</td>
+                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
+                                        <td data-label="Tipo">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
                                     </tr>
                                 </tbody>
                             </table>
-
                         </div>
-
-
                     </footer>
                 </div>`,
   clientes: `<div>
@@ -202,55 +277,103 @@ const rutas = {
                     <header class="main__header-all">
                         <div class="main__header-desc">
                             <h2>Clientes</h2>
-                            <p>Puedes gestionar tus clientes desde el sigueinte panel</p>
+                            <p>Puedes gestionar tus clientes desde el sigueinte panel.</p>
                         </div>
 
-                        <div>
-                           
-                            <button type="submit">Nuevo cliente</button>
+                        <div class="main__button-cont">                           
+                            <button class="main__button-all" type="submit">Nuevo Cliente</button>
                         </div>
                     </header>
 
                     <footer>
-
-                        <div>
-                            <table>
-                                <caption>
-                                    Información de cliente
+                        <div class="footer__table-cont">
+                            <table class="footer__table">
+                                <caption class="footer__table-title">
+                                    Información de Cliente
                                 </caption>
 
                                 <thead>
                                     <tr>
                                         <th scope="col" >Codigo</th>
                                         <th scope="col" >Nombre</th>
-                                        <th scope="col" >Estado</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col" >Iva</th>
+                                        <th scope="col">Precio + iva</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td data-label="Codigo">001</td>
-                                        <td data-label="Nombre">Doris Amparo</td>
-                                        <td data-label="estado">aviable</td>
+                                        <td data-label="Nombre">Arroz roa x 500gr</td>
+                                        <td data-label="Precio">$20.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$23.20</td>
                                     </tr>
                                     <tr>
                                         <td data-label="Codigo">002</td>
-                                        <td data-label="Nombre">Diego Alejandro</td>
-                                        <td data-label="Iva">aviable</td>
+                                        <td data-label="Nombre">Frijol lima superoriente x 500</td>
+                                        <td data-label="Precio">$30.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$34.80</td>
                                     </tr>
                                     <tr>
                                         <td data-label="Codigo">003</td>
-                                        <td data-label="Nombre">Maria adaljiza</td>
-                                        <td data-label="Iva">aviable</td>
+                                        <td data-label="Nombre">Aceite superoriente x200ml</td>
+                                        <td data-label="Precio">$50.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$58.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Codigo">004</td>
+                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-label="Codigo">005</td>
+                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-label="Codigo">006</td>
+                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-label="Codigo">007</td>
+                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-label="Codigo">008</td>
+                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td data-label="Codigo">009</td>
+                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
                                     </tr>
                                 </tbody>
                             </table>
-
                         </div>
-
-
                     </footer>
-
-
                 </div>`,
   ventas: `<div>
                 <header class="main__header-all">
@@ -259,11 +382,9 @@ const rutas = {
                             <p>Puedes gestionar tus ventas desde el sigueinte panel</p>
                         </div>
 
-                        <div>
-                           
-                            <button type="submit">Nueva venta</button>
+                        <div class="main__button-cont">                           
+                            <button class="main__button-all" type="submit">Nueva venta</button>
                         </div>
-                    </header> 
             </div>  
   `,
   facturacion: `<div>
@@ -273,15 +394,15 @@ const rutas = {
                             <p>Puedes gestionar tus facturas desde el sigueinte panel</p>
                         </div>
 
-                        <div>                           
-                            <button type="submit">Nueva factura</button>
+                        <div class="main__button-cont">                           
+                            <button class="main__button-all" type="submit">Nueva factura</button>
                         </div>
-                    </header>
   
   
             </div>`,
-  configuracion: `<h2>Configuración</h2><p>Opciones de configuración del sistema.</p>`,
+
   perfil: `<h2>Perfil</h2><p>Aquí puedes editar tu información.</p>`,
+  configuracion: `<h2>Configuración</h2><p>Opciones de configuración del sistema.</p>`,
 };
 
 function cargarContenido() {
