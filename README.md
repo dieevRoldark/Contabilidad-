@@ -11,3 +11,12 @@ Para este fin la demo inicial debe contar con:
 - Control de stock
 - Alertas personalizadas
 - Compatibilidad con los servicios de la Dian
+
+## Requerimientos del producto
+
+- Requerimientos funcionales:
+- Requerimientos No funcionales:
+- Diagrama de casos de uso:
+- Diagramas adicionales
+
+### Arquitectura Propuesta
