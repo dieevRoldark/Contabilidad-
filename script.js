@@ -367,7 +367,80 @@ const rutas = {
   
             </div>`,
 
-  perfil: `<h2>Perfil</h2><p>Aquí puedes editar tu información.</p>`,
+  perfil: `<div class="perfil__container-wrapper">
+                    <div class="perfil__section-wrapper">
+                        <section class="perfil__section">
+                            <div class="perfil__section-content">
+                                <div class="perfil__content">
+                                    <div class="perfil">                                        
+                                        <div class="perfil-foto">
+                                            <img src="img/profile-img.jpg" alt="Foto de perfil">
+                                        </div>
+                                        <div class="perfil-description">
+                                           <h3>Perfil de Usuario</h3>
+                                            <p>Mercados Doris</p> 
+                                        </div>                                        
+                                    </div>
+                                    <div class="perfil__button">
+                                        <button type="submit">Cambiar foto</button>
+                                        <button type="submit">Remover</button>  
+                                    </div>                                    
+                                </div>                      
+                            </div>
+                            <div class="perfil__info-card">
+                                <h3>Información Personal</h3>
+                                <form class="form__perfil">
+                                    <div>
+                                        <label for="nombre">Nombre</label>
+                                        <input id="nombre" type="text" placeholder="Jhon Smith">
+                                    </div>
+                                    <div>
+                                        <label for="telefono">Teléfono</label>
+                                        <input id="telefono" type="tel" placeholder="312 6234762">
+                                    </div>
+                                    <div>
+                                        <label for="email">Correo</label>
+                                        <input id="email" type="email" placeholder="Example@correo.com">
+                                    </div>
+                                    
+                                    <div>
+                                        <label for="direccion">Dirección</label>
+                                        <input id="direccion" type="text" placeholder="Cll 2 # 1-2">
+                                    </div>
+                                    <div>
+                                        <button type="submit">Guardar Cambios</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="perfil__info-card" >
+                                <h3>Información del negocio</h3>
+                                <form class="form__perfil">
+                                    <div>
+                                        <label for="nombre-negocio">Nombre del Negocio</label>
+                                        <input id="nombre-negocio" type="text" placeholder="Mercados Doris">
+                                    </div>
+                                    <div>
+                                        <label for="tipo-negocio">Tipo de Negocio</label>
+                                        <input id="tipo-negocio" type="text" placeholder="Mini mercado">
+                                    </div>
+                                    <div>
+                                        <label for="ubicacion-negocio">Ubicación del Negocio</label>
+                                        <input id="ubicacion-negocio" type="text" placeholder="Calle colombia 20-19">
+                                    </div>
+                                    <div>
+                                        <label for="fecha-creacion">Fecha de registro</label>
+                                        <input id="fecha-creacion" type="date">
+                                    </div>
+                                    <div>
+                                        <button type="submit">Guardar Cambios</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+
+                    </div>  
+                </div>`,
   configuracion: `<h2>Configuración</h2><p>Opciones de configuración del sistema.</p>`,
 };
 
