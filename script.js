@@ -74,10 +74,6 @@ const rutas = {
                     <footer>
                         <div class="footer__table-cont">
                             <table class="footer__table">
-                                <caption class="footer__table-title">
-                                    Información de productos
-                                </caption>
-
                                 <thead>
                                     <tr>
                                         <th scope="col" >Codigo</th>
@@ -177,9 +173,6 @@ const rutas = {
                     <footer>
                         <div class="footer__table-cont">
                             <table class="footer__table">
-                                <caption class="footer__table-title">
-                                    Información de proveedores
-                                </caption>
 
                                 <thead>
                                     <tr>
@@ -274,10 +267,6 @@ const rutas = {
                     <footer>
                         <div class="footer__table-cont">
                             <table class="footer__table">
-                                <caption class="footer__table-title">
-                                    Información de Cliente
-                                </caption>
-
                                 <thead>
                                     <tr>
                                         <th scope="col" >Cedula</th>
@@ -381,12 +370,8 @@ const rutas = {
                             </form>
                         </section>
 
-                        <footer>
-                            <table>
-                                <caption>
-                                    Información de productos
-                                </caption>
-
+                        <footer class="footer__table-cont">
+                            <table class="footer__table">
                                 <thead>
                                     <tr>
                                         <th scope="col" >Codigo</th>
@@ -449,22 +434,6 @@ const rutas = {
                                         <td data-label="Iva">16%</td>
                                         <td data-label="Precio + iva">$29.00</td>
                                     </tr>
-
-                                    <tr>
-                                        <td data-label="Codigo">008</td>
-                                        <td data-label="Nombre">Desodorante Rexona x 60 ml</td>
-                                        <td data-label="Precio">$25.00</td>
-                                        <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$29.00</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td data-label="Codigo">009</td>
-                                        <td data-label="Nombre">Azucar Morena x 500 gr</td>
-                                        <td data-label="Precio">$25.00</td>
-                                        <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$29.00</td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </footer>
@@ -512,12 +481,8 @@ const rutas = {
                             </form>
                         </section>
 
-                        <footer>
-                            <table>
-                                <caption>
-                                    Información de productos
-                                </caption>
-
+                        <footer class="footer__table-cont">
+                            <table class="footer__table">                               
                                 <thead>
                                     <tr>
                                         <th scope="col" >Codigo</th>
