@@ -577,8 +577,8 @@ const rutas = {
                                             <img src="img/profile-img.jpg" alt="Foto de perfil">
                                         </div>
                                         <div class="perfil-description">
-                                           <h3>Perfil de Usuario</h3>
-                                            <p>Mercados Doris</p> 
+                                           <h3>Mercados Doris</h3>
+                                            <p>Mini Mercado</p> 
                                         </div>                                        
                                     </div>
                                     <div class="perfil__button">
@@ -712,3 +712,5 @@ function cargarContenido() {
 window.addEventListener("load", cargarContenido);
 window.addEventListener("hashchange", cargarContenido);  
 
+const etiquetas = document.head.children
+console.log(etiquetas)
