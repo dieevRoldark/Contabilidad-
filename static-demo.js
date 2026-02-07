@@ -574,7 +574,7 @@ const rutas = {
                                 <div class="perfil__content">
                                     <div class="perfil">                                        
                                         <div class="perfil-foto">
-                                            <img src="img/profile-img.jpg" alt="Foto de perfil">
+                                            <img loading="lazy" src="img/profile-img.jpg" alt="Foto de perfil">
                                         </div>
                                         <div class="perfil-description">
                                            <h3>Mercados Doris</h3>
@@ -711,6 +711,3 @@ function cargarContenido() {
 // Cargar al inicio y cuando cambie el hash
 window.addEventListener("load", cargarContenido);
 window.addEventListener("hashchange", cargarContenido);  
-
-const etiquetas = document.head.children
-console.log(etiquetas)
