@@ -103,7 +103,7 @@ body, html {
     }
 
     button {
-        color: var(--input-bg);
+        color: var(--card-bg);
         font-size: 0.7rem;
         padding: 5px;
         background-color: var(--primary);
