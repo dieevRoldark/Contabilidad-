@@ -347,9 +347,9 @@ const rutas = {
                         </header>
                     </div>
 
-                    <div>
-                        <section>
-                            <form>
+                    <div class="main__sales-wrapper">
+                        <section ckass="sales__form-wrapper">
+                            <form class="sales__form">
                                 <div>
                                     <label for="">Codigo de barras</label>
                                     <input type="text" placeholder="Escanea el codigo de barras">
@@ -366,12 +366,18 @@ const rutas = {
                                     <label for="">Precio Unitario</label>
                                     <input type="text" placeholder="$0.00">
                                 </div>
-                                <button type="submit">Agregar Producto</button>
+                                <div>
+
+                                </div>
+                                <div>
+                                    <button class="main__button-all" type="submit">Agregar Producto</button>
+                                </div>
+                                
                             </form>
                         </section>
 
-                        <footer class="footer__table-cont">
-                            <table class="footer__table">
+                        <footer class="footer__table-cont2">
+                            <table class="footer__table2">
                                 <thead>
                                     <tr>
                                         <th scope="col" >Codigo</th>
@@ -448,6 +454,14 @@ const rutas = {
                                         <td data-label="Iva">16%</td>
                                         <td data-label="Precio + iva">$29.00</td>
                                     </tr>
+
+                                    <tr>
+                                        <td data-label="Codigo">007</td>
+                                        <td data-label="Nombre">Leche monteFrio x380gr</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </footer>
@@ -498,8 +512,8 @@ const rutas = {
                     </div>
 
                     <div>
-                        <footer class="footer__table-cont">
-                            <table class="footer__table">                               
+                        <footer class="footer__table-cont2">
+                            <table class="footer__table2">                               
                                 <thead>
                                     <tr>
                                         <th scope="col" >Codigo</th>
