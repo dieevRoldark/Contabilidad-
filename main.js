@@ -1,6 +1,14 @@
+const cacheSections = {};
+
 async function cargarContenido() {
     const hash = window.location.hash.slice(1) || 'inicio';
     const contentDiv = document.getElementById('contenido');
+
+
+    if(cacheSections[hash]) {
+        contentDiv.innerHTML = cacheSections[hash].html;
+        return;
+    }
 
     try {
         // 1. Cargar el HTML 
@@ -8,6 +16,8 @@ async function cargarContenido() {
         if (respuestaHtml.ok) {
             const html = await respuestaHtml.text();
             contentDiv.innerHTML = html;
+
+            cacheSections[hash] =  html ;
             
             try {
                 // 2. Intentamos cargar dinámicamente el JS de esta sección
