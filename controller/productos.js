@@ -42,6 +42,10 @@ function cargarTablaProductos() {
                 <td>$${producto.precio}</td>
                 <td>${producto.iva}</td>
                 <td>$${producto.precioIva}</td>
+                <td>
+                    <button class="btn-editar">✏️</button>
+                    <button class="btn-eliminar">🗑️</button>
+                </td>
             </tr>
         `;
         
