@@ -450,7 +450,7 @@ botones del header de los navaside links  */
 
 .footer__table-cont {
     width: 77rem;
-    height: 455px;
+    height: 450px;
     overflow: auto;
     margin: auto;
     border: 1px solid transparent;
@@ -483,36 +483,6 @@ botones del header de los navaside links  */
     position: sticky;
     top: 0;
 }
-/*
-.footer__table-cont{
-    width: 77.5rem;
-    height: 400px;
-
-
-    .footer__table {
-        width: 100%;
-        height: 500px;
-        overflow: hidden;
-        border: 1px solid #fff;
-        border-radius: 1rem;
-
-        background-color: var(--card-bg);
-
-        
-        thead {
-            background-color: var(--card-header-bg);
-            color:  #fff;
-            line-height: 2.5;
-        }
-    }
-
-    th, td {
-        border-bottom: 1px solid var(--border);
-    }
-
-}
-
-*/
 
 
 /*---- TABLAS ENDS -----*/
