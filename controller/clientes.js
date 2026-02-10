@@ -37,6 +37,8 @@ function cargarTablaClientes() {
                 <td>${cliente.telefono}</td>
                 <td>${cliente.correo}</td>
                 <td>${cliente.direccion}</td>
+                <td><button class="btn-editar">✏️</button></td>
+                <td><button class="btn-eliminar">🗑️</button></td>
             </tr>
         `
 

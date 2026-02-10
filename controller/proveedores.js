@@ -36,6 +36,8 @@ function cargarTablaProveedores() {
                 <td>${proveedor.telefono}</td>
                 <td>${proveedor.direccion}</td>
                 <td>${proveedor.email}</td>
+                <td><button class="btn-editar">✏️</button></td>
+                <td><button class="btn-eliminar">🗑️</button></td>
             </tr>
         `
 

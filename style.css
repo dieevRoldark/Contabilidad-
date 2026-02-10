@@ -284,7 +284,7 @@ body, html {
 
 
 .main__header-button {
-    background-color: var(--primary-dark);
+    background-color: var(--primary);
     color: var(--card-bg);
     border-radius: 5px;
     margin: 0;
