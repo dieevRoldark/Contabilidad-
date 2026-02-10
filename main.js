@@ -1,36 +1,32 @@
-// Objeto vacío para guardar las secciones ya visitadas
-const cacheVistas = {}; 
-
 async function cargarContenido() {
     const hash = window.location.hash.slice(1) || 'inicio';
     const contentDiv = document.getElementById('contenido');
-    const rutaArchivo = `./sections/${hash}.html`;
 
-    // PREGUNTA DE SEGURIDAD: ¿Ya tengo esta vista en memoria?
-    if (cacheVistas[hash]) {
-        // Usamos la copia guardada
-        contentDiv.innerHTML = cacheVistas[hash];
-        console.log(`Cargado desde caché: ${hash}`);
-        return;
-    }
-
-    // Si no la tengo, entonces sí hacemos fetch
     try {
-        const respuesta = await fetch(rutaArchivo);
-
-        if (respuesta.ok) {
-            const html = await respuesta.text();
-            
-            // GUARDAMOS EN MEMORIA antes de mostrar
-            cacheVistas[hash] = html; 
-            
+        // 1. Cargar el HTML 
+        const respuestaHtml = await fetch(`./sections/${hash}.html`);
+        if (respuestaHtml.ok) {
+            const html = await respuestaHtml.text();
             contentDiv.innerHTML = html;
+            
+            try {
+                // 2. Intentamos cargar dinámicamente el JS de esta sección
+                const modulo = await import(`./controller/${hash}.js`);
+                
+                // 3. Si el archivo existe y tiene una función 'init', la ejecutamos
+                if (modulo.init) {
+                    modulo.init();
+                }
+            } catch (errorJs) {
+
+                console.log(`Nota: No se cargó script para ${hash} (o no existe).`);
+            }
+
         } else {
             contentDiv.innerHTML = '<h2>Error 404</h2>';
         }
     } catch (error) {
-        console.error(error);
-        contentDiv.innerHTML = '<h2>Error de conexión</h2>';
+        console.error('Error:', error);
     }
 }
 
