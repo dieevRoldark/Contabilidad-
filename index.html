@@ -19,7 +19,7 @@
     <script type="module" src="main.js" ></script>
 
 </head>
-<body>    
+<body>
     <div class="container__wrapper">
         <div class="container__nav-wrapper">
             <header class="container__header">
@@ -137,75 +137,144 @@
                 </footer>
             </aside>
 
-            <main id="contenido" class="main__content">
+            <main id="contenido" class="main__content">         
+
+
 
                 <div>
-                    <section>
-                        <div>
-                            <section>
-                                <h4>Configuración de reportes</h4>
+                    <div>
+                        <header class="main__header-all">
 
-                                <details open>
-                                    <summary>Gestion de reportes</summary>
-                                    <div>
-                                        <p>Reportes diarios</p>
-                                        <label class="switch">
-                                            <input type="checkbox">
-                                            <span class="slider round"></span>
+                            <div class="main__header-desc">
+                                <h2>Ventas</h2>
+                                <p>Puedes gestionar tus ventas desde el sigueinte panel</p>
+                            </div>
 
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <p>Reportes semanales</p>
-                                        <label class="switch">
-                                            <input type="checkbox">
-                                            <span class="slider round"></span>
+                            <div class="main__button-cont">                           
+                                <button class="main__button-all" type="submit">Nueva venta</button>
+                            </div>
+                        </header>
+                    </div>
 
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <p>Reportes mensuales</p>
-                                        <label class="switch">
-                                            <input type="checkbox">
-                                            <span class="slider round"></span>
+                    <div class="main__sales-wrapper">
+                        <section ckass="sales__form-wrapper">
+                            <form class="sales__form">
+                                <div>
+                                    <label for="">Codigo de barras</label>
+                                    <input type="text" placeholder="Escanea el codigo de barras">
+                                </div>
+                                <div>
+                                    <label for="">Producto</label>
+                                    <input type="text" placeholder="Nombre del producto">
+                                </div>
+                                <div>
+                                    <label for="">Cantidad</label>
+                                    <input type="number" placeholder="0">
+                                </div>
+                                <div>
+                                    <label for="">Precio Unitario</label>
+                                    <input type="text" placeholder="$0.00">
+                                </div>
+                                <button type="submit">Agregar Producto</button>
+                            </form>
+                        </section>
 
-                                        </label>
-                                    </div>
+                        <footer class="footer__table-cont">
+                            <table class="footer__table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" >Codigo</th>
+                                        <th scope="col" >Nombre</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col" >Iva</th>
+                                        <th scope="col">Precio + iva</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td data-label="Codigo">001</td>
+                                        <td data-label="Nombre">Arroz roa x 500gr</td>
+                                        <td data-label="Precio">$20.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$23.20</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Codigo">002</td>
+                                        <td data-label="Nombre">Frijol lima superoriente x 500</td>
+                                        <td data-label="Precio">$30.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$34.80</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Codigo">001</td>
+                                        <td data-label="Nombre">Arroz roa x 500gr</td>
+                                        <td data-label="Precio">$20.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$23.20</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Codigo">003</td>
+                                        <td data-label="Nombre">Aceite superoriente x200ml</td>
+                                        <td data-label="Precio">$50.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$58.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Codigo">004</td>
+                                        <td data-label="Nombre">Azucar riopaila x 500 gr</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Codigo">001</td>
+                                        <td data-label="Nombre">Arroz roa x 500gr</td>
+                                        <td data-label="Precio">$20.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$23.20</td>
+                                    </tr>
 
-                                </details>
-                                <details open>
-                                    <summary>Frecuencia Notificaciones</summary>
-                                    <p>Selecciona la frecuencia con la que deseas recibir los reportes.</p>
-                                    <select>
-                                        <option value="diario">Diario</option>
-                                        <option value="semanal">Semanal</option>
-                                        <option value="mensual">Mensual</option>
-                                    </select>
-                                </details>
+                                    <tr>
+                                        <td data-label="Codigo">005</td>
+                                        <td data-label="Nombre">Chocolate Chocoline x 200</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
 
+                                    <tr>
+                                        <td data-label="Codigo">001</td>
+                                        <td data-label="Nombre">Arroz roa x 500gr</td>
+                                        <td data-label="Precio">$20.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$23.20</td>
+                                    </tr>
 
+                                    <tr>
+                                        <td data-label="Codigo">006</td>
+                                        <td data-label="Nombre">Salsa de tomate Bary x200 gr</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
 
-                                <details open>
-                                    <summary>Formato de reportes</summary>
-                                    <p>Selecciona el formato preferido para la exportación de reportes (PDF, Excel, CSV).</p>
-                                    <select>
-                                        <option value="pdf">PDF</option>
-                                        <option value="excel">Excel</option>
-                                        <option value="csv">CSV</option>
-                                    </select>
-                                </details>
-                            </section>
-                        </div>
-                    </section>
+                                    <tr>
+                                        <td data-label="Codigo">007</td>
+                                        <td data-label="Nombre">Leche monteFrio x380gr</td>
+                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$29.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </footer>
+                    </div>
                 </div>
 
 
 
-
-
-
-                <!-- Seccion facturacion
-                <div>
+                <!-- Facturacion
+                 <div>
                     <div>
                         <header class="main__header-all">
 
@@ -218,11 +287,9 @@
                                 <button class="main__button-all" type="submit">Nueva factura</button>
                             </div>
                         </header>
-                    </div>
 
-                    <div>
-                        <section>
-                            <form>
+                        <section class="fact__info-wraper">
+                            <form class="fact__form">
                                 <div>
                                     <label for="">Nit</label>
                                     <input type="number" >
@@ -232,27 +299,28 @@
                                     <input type="text">
                                 </div>
                                 <div>
+                                    <label for="">Iva</label>
+                                    <input style="border: none;" type="number" placeholder="19%">
+                                </div>
+                                <div>
                                     <label for="">Costo</label>
                                     <input type="number" placeholder="0">
                                 </div>
-                                <div>
-                                    <label for="">Iva</label>
-                                    <input type="number" placeholder="19%">
-                                </div>
+                                
                                 <div>
                                     <label for="">Cantidad</label>
                                     <input type="text" placeholder="$0.00">
                                 </div>
-                                <button type="submit">Agregar Producto</button>
+                                <div>
+                                   <button class="main__button-all" type="submit">Agregar Producto</button> 
+                                </div>                                
                             </form>
                         </section>
+                    </div>
 
-                        <footer>
-                            <table>
-                                <caption>
-                                    Información de productos
-                                </caption>
-
+                    <div>
+                        <footer class="footer__table-cont">
+                            <table class="footer__table">                               
                                 <thead>
                                     <tr>
                                         <th scope="col" >Codigo</th>
@@ -336,6 +404,7 @@
                         </footer>
                     </div>
                 </div> -->
+                
 
                 
 

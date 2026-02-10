@@ -26,7 +26,7 @@ body, html {
     --border: #e2e8f0;
     --card-bg: #ffffff;
     --shadow: 0 4px 6px -1px rgba(6, 75, 122, 0.09);
-    --input-bg: #ffffff;
+    --input-bg: #94a3b818;
     --card-header-bg: #3482db;
 }
 
@@ -46,14 +46,16 @@ body, html {
 
 }
 
-
-/* ---- SECCIÒN HEADER NAVSEARCH ---- */
+/* ---- SECCIÒN DASHBOAR WRAPPER ---- */
 
 .container__wrapper {
     display: flex;
     flex-direction: column;
     max-height: 100vh;
 }
+/* ---- DASHBOAR WRAPPER ENDS ---- */
+
+/* ---- SECCIÒN HEADER NAVSEARCH ---- */
 
 .container__nav-wrapper {
     display: flex;
@@ -131,18 +133,19 @@ body, html {
 .nav__icon-item {
     margin: 5px;
 }
+/* ---- HEADER NAVSEARCH ENDS ---- */
 
-/* ---- SECCIÒN DASHBOAR WRAPPER ---- */
+/* ---- SECCIÒN CONTENT WRAPPER ---- */
 
 .content__wrapper {
     display: flex;
     flex-direction: row;
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 94vh;
 }
 
-/* ---- DASHBOAR WRAPPER ENDS ---- */
+/* ---- CONTENT WRAPPER ENDS ---- */
 
 /* ---- SECCIÒN ASIDE NAVBAR ---- */
 
@@ -152,7 +155,7 @@ body, html {
     background-color: var(--card-bg);
     min-width: 283px;
     border-right: 0.1px solid #2222223d;
-    max-height: 94vh;
+    max-height: 93vh;
 }
 
 .content__header-nav {
@@ -241,17 +244,17 @@ body, html {
 
 /* ----  NAVBAR ASIDE ENDS ---- */
 
-/* ----  SECCIÒN MAIN ---- */
+/* ----  SECCIÒN MAIN INICIO ---- */
 
 .main__content {
-    flex: 2;
+    width: 100%;
     background-color: var(--primary-light);
+    overflow-y: auto;
 }
 
 .main__content-wrapper {
     display: flex;
     flex-direction: column;
-    align-content: center;
 }
 
 .main__header {
@@ -375,17 +378,13 @@ body, html {
     border-radius: 6px 6px 0 0;
 }
 
-/* ----  SECCIÒN MAIN ENDS ---- */
+/* ----  MAIN INICIO ENDS ---- */
 
-
-
-/* ----SECCION DE STYLOS PARA LOS LINKS ASIDE + "Creando estilo reutilizables"----*/
-
+/* ----SECCION DECRIPTIONS ----*/
 
 /* La clase main__header-all se creo para reutilizar el estilo de las
   descripciones de todos los links aside*/
 .main__header-all {
-    margin: 10px;
     display: flex;
     flex-direction: row;
     align-items: self-end;
@@ -393,6 +392,7 @@ body, html {
     border: 1px solid #fff;
     border-radius: 0.5rem;
     padding: 9px;
+    margin: 10px;
 
 
     h2 {
@@ -414,17 +414,6 @@ body, html {
 }
 }
 
-
-/*---- PRODUCTOS ----*/
-
-
-.main__productos-wrapper {
-    display: flex;
-    flex-direction: column;
-
-}
-
-
 /* clase .main__button-all reutilizado en los
 botones del header de los navaside links  */
 .main__button-all {
@@ -438,29 +427,82 @@ botones del header de los navaside links  */
 }
 
 
+/* ---- DECRIPTIONS ENDS ----*/
+
+
+/*---- PRODUCTOS SECTION ----*/
+
+
+.main__productos-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/*---- PRODUCTOS ENDS ----*/
+
+
+
+/*---- TABLAS -----*/
+
 
 /*Estilo de tabla La cual se esta reutilizando en las demás tablas*/
 
-.footer__table-cont{
-    width: 77.5rem;
-    height: 450px;
+.footer__table-cont {
+    width: 77rem;
+    height: 455px;
+    overflow: auto;
     margin: auto;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
 
 
     .footer__table {
         width: 100%;
-        height: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        text-align: center;
+        background-color: var(--card-bg);
+        border-radius: 1rem;
+
+        thead {
+            background-color: var(--card-header-bg);
+            color: #fff;
+            line-height: 2.5;
+        }
+
+        th, td {
+            border-bottom: 1px solid var(--border);
+            line-height: 2.5;      
+        }
+    }
+ 
+
+}
+.footer__table-cont table thead {
+    position: sticky;
+    top: 0;
+}
+/*
+.footer__table-cont{
+    width: 77.5rem;
+    height: 400px;
+
+
+    .footer__table {
+        width: 100%;
+        height: 500px;
         overflow: hidden;
         border: 1px solid #fff;
         border-radius: 1rem;
-        text-align: center;
+
         background-color: var(--card-bg);
 
         
         thead {
             background-color: var(--card-header-bg);
             color:  #fff;
-            line-height: 2.5;           
+            line-height: 2.5;
         }
     }
 
@@ -470,10 +512,65 @@ botones del header de los navaside links  */
 
 }
 
+*/
 
-/* EDN SECCION DE STYLOS PARA LOS LINKS ASIDE */
 
-/* SECCION CONFIGURACIÓN DE PERFIL*/
+/*---- TABLAS ENDS -----*/
+
+/*----- VENTAS SECTION -----*/
+
+.main__sales-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.sales__form-wrapper {
+    width: 100%
+}
+
+.sales__form {
+    background-color: var(--card-bg);
+    border: 1px solid #fff;
+    border-radius: 0.5rem;
+    padding: 9px;
+    margin: 10px;
+
+}
+
+
+/*----- VENTAS ENDS -----*/
+
+/*----- FACT SECTION -----*/
+
+.fact__info-wraper {
+    background-color: var(--card-bg);
+    border: 1px solid #fff;
+    border-radius: 0.5rem;
+    padding: 9px;
+    margin: 10px;
+}
+
+.fact__form {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr) ;
+
+        div {
+            padding: 16px;
+
+            input {
+                padding: 3.5px;
+                border: 1px solid #222;
+                border-radius: 0.277rem;
+                width: 200px;
+                background-color: var(--input-bg);
+            }
+        }
+    }
+
+/*----- FACT ENDS -----*/
+
+/*---- PROFILE SETTINGS SECTIONS ----*/
 
 .perfil__container-wrapper {
     display: flex;
@@ -553,10 +650,10 @@ botones del header de los navaside links  */
     }
 }
 
-/* ---- Información personal ----*/
+
 
 /*clase .perfil__info-card y .form__perfil usada para 
-la información personal y de negocio*/
+la información personal e infomación de negocio*/
 .perfil__info-card {
     background-color: var(--card-bg);
     margin: 12px;
@@ -583,17 +680,45 @@ la información personal y de negocio*/
     padding: 20px;
 }
 
-/* END SECCION DE PERFIL / información personal*/
 
-/* CONFIGURACIÓN SECTION END*/
+/*---- PROFILE SETTINGS ENDS ----*/
+
+/*---- SYSTEM SETTINGS ----*/
+
+.setting__container-wrapper {
+    height: 100%;
+}
+
+.setting__section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h4 {
+        font-size: 1.9rem;
+    }
+}
+
+.setting__section-facts {
+    width: 100%;
+}
 
 
+.fact-content {
+    background-color: var(--card-bg);
+    margin: 10px;
+    border: 1px solid var(--border);
+    box-shadow:var(--shadow);
+    border-radius: 0.5rem;
+    padding: 40px;
 
-/* CONFIGURACIÓN SECTION*/
-
-
-
-
-/* CONFIGURACIÓN SECTION END*/
+    summary {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+}
+/*---- SYSTEM SETTINGS ENDS ----*/
 
 /* ----  ANIMACIONES PENDIENTES---- */

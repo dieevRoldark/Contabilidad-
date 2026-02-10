@@ -397,6 +397,13 @@ const rutas = {
                                         <td data-label="Precio + iva">$34.80</td>
                                     </tr>
                                     <tr>
+                                        <td data-label="Codigo">001</td>
+                                        <td data-label="Nombre">Arroz roa x 500gr</td>
+                                        <td data-label="Precio">$20.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$23.20</td>
+                                    </tr>
+                                    <tr>
                                         <td data-label="Codigo">003</td>
                                         <td data-label="Nombre">Aceite superoriente x200ml</td>
                                         <td data-label="Precio">$50.00</td>
@@ -410,6 +417,13 @@ const rutas = {
                                         <td data-label="Iva">16%</td>
                                         <td data-label="Precio + iva">$29.00</td>
                                     </tr>
+                                    <tr>
+                                        <td data-label="Codigo">001</td>
+                                        <td data-label="Nombre">Arroz roa x 500gr</td>
+                                        <td data-label="Precio">$20.00</td>
+                                        <td data-label="Iva">16%</td>
+                                        <td data-label="Precio + iva">$23.20</td>
+                                    </tr>
 
                                     <tr>
                                         <td data-label="Codigo">005</td>
@@ -420,16 +434,16 @@ const rutas = {
                                     </tr>
 
                                     <tr>
-                                        <td data-label="Codigo">006</td>
-                                        <td data-label="Nombre">Salsa de tomate Bary x200 gr</td>
-                                        <td data-label="Precio">$25.00</td>
+                                        <td data-label="Codigo">001</td>
+                                        <td data-label="Nombre">Arroz roa x 500gr</td>
+                                        <td data-label="Precio">$20.00</td>
                                         <td data-label="Iva">16%</td>
-                                        <td data-label="Precio + iva">$29.00</td>
+                                        <td data-label="Precio + iva">$23.20</td>
                                     </tr>
 
                                     <tr>
-                                        <td data-label="Codigo">007</td>
-                                        <td data-label="Nombre">Leche monteFrio x380gr</td>
+                                        <td data-label="Codigo">006</td>
+                                        <td data-label="Nombre">Salsa de tomate Bary x200 gr</td>
                                         <td data-label="Precio">$25.00</td>
                                         <td data-label="Iva">16%</td>
                                         <td data-label="Precio + iva">$29.00</td>
@@ -452,11 +466,9 @@ const rutas = {
                                 <button class="main__button-all" type="submit">Nueva factura</button>
                             </div>
                         </header>
-                    </div>
 
-                    <div>
-                        <section>
-                            <form>
+                        <section class="fact__info-wraper">
+                            <form class="fact__form">
                                 <div>
                                     <label for="">Nit</label>
                                     <input type="number" >
@@ -466,21 +478,26 @@ const rutas = {
                                     <input type="text">
                                 </div>
                                 <div>
+                                    <label for="">Iva</label>
+                                    <input style="border: none;" type="number" placeholder="19%">
+                                </div>
+                                <div>
                                     <label for="">Costo</label>
                                     <input type="number" placeholder="0">
                                 </div>
-                                <div>
-                                    <label for="">Iva</label>
-                                    <input type="number" placeholder="19%">
-                                </div>
+                                
                                 <div>
                                     <label for="">Cantidad</label>
                                     <input type="text" placeholder="$0.00">
                                 </div>
-                                <button type="submit">Agregar Producto</button>
+                                <div>
+                                   <button class="main__button-all" type="submit">Agregar Producto</button> 
+                                </div>                                
                             </form>
                         </section>
+                    </div>
 
+                    <div>
                         <footer class="footer__table-cont">
                             <table class="footer__table">                               
                                 <thead>
@@ -641,53 +658,37 @@ const rutas = {
 
                     </div>  
                 </div>`,
-  configuracion: `<div>
-                    <section>
-                        <div>
-                            <section>
-                                <h4>Configuración de reportes</h4>
-
-                                <details open>
-                                    <summary>Gestion de reportes</summary>
+  configuracion: `<div class="setting__container-wrapper">
+                    <section class="setting__section">    
+                        <h4>Configuración de reportes</h4>                    
+                        <section class="setting__section-facts">
+                            <div>
+                                <details class="fact-content">
+                                    <summary>Personalización de reportes</summary>
+                                    <p>Elige qué información deseas incluir en tus reportes (ventas, compras, inventario, etc.).</p>
                                     <div>
-                                        <p>Reportes diarios</p>
-                                        <label class="switch">
-                                            <input type="checkbox">
-                                            <span class="slider round"></span>
-
-                                        </label>
+                                        <label><input type="checkbox" checked> Ventas</label>
+                                        <label><input type="checkbox" checked> Compras</label>
+                                        <label><input type="checkbox" checked> Inventario</label>
+                                        <label><input type="checkbox"> Clientes</label>
+                                        <label><input type="checkbox"> Proveedores</label>
                                     </div>
-                                    <div>
-                                        <p>Reportes semanales</p>
-                                        <label class="switch">
-                                            <input type="checkbox">
-                                            <span class="slider round"></span>
-
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <p>Reportes mensuales</p>
-                                        <label class="switch">
-                                            <input type="checkbox">
-                                            <span class="slider round"></span>
-
-                                        </label>
-                                    </div>
-
                                 </details>
-                                <details open>
-                                    <summary>Frecuencia Notificaciones</summary>
-                                    <p>Selecciona la frecuencia con la que deseas recibir los reportes.</p>
-                                    <select>
-                                        <option value="diario">Diario</option>
-                                        <option value="semanal">Semanal</option>
-                                        <option value="mensual">Mensual</option>
-                                    </select>
+                            </div>
+                            
+                            <div>
+                                <details class="fact-content">
+                                    <summary>Frecuencia de reportes</summary>
+                                    <p>Configura la frecuencia con la que deseas recibir los reportes (diaria, semanal, mensual).</p>
+                                    <div>
+                                        <label><input type="radio" name="frecuencia" checked> Diario</label>
+                                        <label><input type="radio" name="frecuencia"> Semanal</label>
+                                        <label><input type="radio" name="frecuencia"> Mensual</label>
+                                    </div>
                                 </details>
-
-
-
-                                <details open>
+                            </div>
+                            <div>
+                                <details class="fact-content">
                                     <summary>Formato de reportes</summary>
                                     <p>Selecciona el formato preferido para la exportación de reportes (PDF, Excel, CSV).</p>
                                     <select>
@@ -696,8 +697,29 @@ const rutas = {
                                         <option value="csv">CSV</option>
                                     </select>
                                 </details>
-                            </section>
-                        </div>
+                            </div>
+
+                            <details class="fact-content">
+                                <summary>Frecuencia Notificaciones</summary>
+                                <p>Selecciona la frecuencia con la que deseas recibir los reportes.</p>
+                                <select>
+                                    <option value="diario">Diario</option>
+                                    <option value="semanal">Semanal</option>
+                                    <option value="mensual">Mensual</option>
+                                </select>
+                            </details>
+
+                            <details  class="fact-content">
+                                <summary>Canales de Notificación</summary>
+                                <p>Elige los canales a través de los cuales deseas recibir las notificaciones (correo electrónico, SMS, notificaciones push).</p>
+                                <div>
+                                    <label><input type="checkbox" checked> Correo electrónico</label>
+                                    <label><input type="checkbox"> SMS</label>
+                                    <label><input type="checkbox"> Notificaciones push</label>
+                                </div>
+                            </details>
+                            
+                        </section>                        
                     </section>
                 </div>`,
 };
