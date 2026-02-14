@@ -1,9 +1,10 @@
                 <div>
+                    <h1 style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">Facturación</h1>
                     <div>
                         <header class="main__header-all">
 
                             <div class="main__header-desc">
-                                <h2>Facturación</h2>
+                                <h2 data-focus-start>Facturación</h2>
                                 <p>Puedes gestionar tus facturas desde el sigueinte panel</p>
                             </div>
 
@@ -17,25 +18,25 @@
                         <section class="fact__info-wraper">
                             <form class="fact__form">
                                 <div>
-                                    <label for="">Nit</label>
-                                    <input type="number" >
+                                    <label for="fact-nit">Nit</label>
+                                    <input id="fact-nit" name="nit" type="number" >
                                 </div>
                                 <div>
-                                    <label for="">Nº Factura</label>
-                                    <input type="text">
+                                    <label for="fact-numero-factura">Nº Factura</label>
+                                    <input id="fact-numero-factura" name="numero_factura" type="text">
                                 </div>
                                 <div>
-                                    <label for="">Iva</label>
-                                    <input style="border: none;" type="number" placeholder="19%">
+                                    <label for="fact-iva">Iva</label>
+                                    <input id="fact-iva" name="iva" style="border: none;" type="number" placeholder="19%">
                                 </div>
                                 <div>
-                                    <label for="">Costo</label>
-                                    <input type="number" placeholder="0">
+                                    <label for="fact-costo">Costo</label>
+                                    <input id="fact-costo" name="costo" type="number" placeholder="0">
                                 </div>
                                 
                                 <div>
-                                    <label for="">Cantidad</label>
-                                    <input type="text" placeholder="$0.00">
+                                    <label for="fact-cantidad">Cantidad</label>
+                                    <input id="fact-cantidad" name="cantidad" type="text" placeholder="$0.00">
                                 </div>
                                 <div>
                                    <button class="main__button-all" type="submit">Agregar Producto</button>
