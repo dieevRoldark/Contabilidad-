@@ -137,8 +137,6 @@ body, html {
 /* ---- HEADER NAVSEARCH ENDS ---- */
 
 
-
-
 /* ---- RESPONSIVE DASHBOARD WRAPPER + HEADER NAVSEARCH ---- */
 
 @media (max-width: 1024px) {
@@ -234,9 +232,6 @@ body, html {
 }
 
 /* ---- RESPONSIVE ENDS ---- */
-
-
-
 
 /* ---- SECCIÒN CONTENT WRAPPER ---- */
 
@@ -346,8 +341,6 @@ body, html {
 
 
 /* ----  NAVBAR ASIDE ENDS ---- */
-
-
 
 /* ---- RESPONSIVE CONTENT WRAPPER + ASIDE NAVBAR ---- */
 
@@ -1048,6 +1041,40 @@ botones del header de los navaside links  */
 
 }
 
+@media (max-width: 1024px) {
+    .sales__form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sales__form div {
+        padding: 12px;
+    }
+
+    .sales__form div input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sales__form div:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .sales__form .main__button-all {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .sales__form {
+        grid-template-columns: 1fr;
+        margin: 0 8px 7px;
+        padding: 8px;
+    }
+
+    .sales__form div {
+        padding: 8px 6px;
+    }
+}
 
 /*----- VENTAS ENDS -----*/
 
@@ -1078,6 +1105,45 @@ botones del header de los navaside links  */
             }
         }
     }
+
+
+    @media (max-width: 1024px) {
+    .fact__form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .fact__form div {
+        padding: 12px;
+    }
+
+    .fact__form div input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .fact__form div:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .fact__form .main__button-all {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .fact__info-wraper {
+        margin: 9px 8px;
+        padding: 8px;
+    }
+
+    .fact__form {
+        grid-template-columns: 1fr;
+    }
+
+    .fact__form div {
+        padding: 8px 6px;
+    }
+}
 
 /*----- FACT ENDS -----*/
 
