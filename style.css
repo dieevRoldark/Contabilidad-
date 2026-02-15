@@ -763,19 +763,6 @@ botones del header de los navaside links  */
 /* ---- DECRIPTIONS ENDS ----*/
 
 
-/*---- PRODUCTOS SECTION ----*/
-
-
-.main__productos-wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-/*---- PRODUCTOS ENDS ----*/
-
-
-
 /*---- TABLAS -----*/
 
 
@@ -882,6 +869,149 @@ botones del header de los navaside links  */
 }
 
 /*---- TABLAS ENDS -----*/
+
+
+/* ---- RESPONSIVE DECRIPTIONS + TABLAS ---- */
+
+@media (max-width: 1200px) {
+    .footer__table-cont,
+    .footer__table-cont2 {
+        width: calc(100% - 20px);
+    }
+}
+
+@media (max-width: 900px) {
+    .main__header-all {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+
+        h2 {
+            margin-top: 12px;
+            font-size: 1.9rem;
+            line-height: 1.2;
+        }
+
+        p {
+            margin: 10px 0 0;
+        }
+
+        .main__header-desc {
+            width: 100%;
+        }
+    }
+
+    .main__button-all {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer__table-cont {
+        height: 470px;
+    }
+
+    .footer__table-cont2 {
+        height: 390px;
+    }
+
+    .footer__table-cont,
+    .footer__table-cont2 {
+        margin: 0 10px 10px;
+    }
+}
+
+@media (max-width: 640px) {
+    .main__header-all {
+        margin: 8px;
+        padding: 10px;
+
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        p {
+            font-size: 0.95rem;
+        }
+    }
+
+    .main__button-all {
+        padding: 9px;
+        font-size: 0.92rem;
+    }
+
+    .footer__table-cont,
+    .footer__table-cont2 {
+        width: calc(100% - 16px);
+        margin: 0 8px 8px;
+        border-radius: 0.4rem;
+    }
+
+    .footer__table-cont {
+        height: 380px;
+    }
+
+    .footer__table-cont2 {
+        height: 340px;
+    }
+
+    .footer__table-cont .footer__table,
+    .footer__table-cont2 .footer__table2 {
+        font-size: 0.88rem;
+
+        thead {
+            line-height: 1.8;
+        }
+
+        tbody {
+            th,
+            td {
+                padding: 7px 5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .main__header-all {
+        h2 {
+            font-size: 1.45rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    .footer__table-cont,
+    .footer__table-cont2 {
+        width: calc(100% - 12px);
+        margin: 0 6px 6px;
+    }
+
+    .footer__table-cont {
+        height: 320px;
+    }
+
+    .footer__table-cont2 {
+        height: 300px;
+    }
+}
+
+/* ---- RESPONSIVE DECRIPTIONS + TABLAS ENDS ---- */
+
+
+
+/*---- PRODUCTOS SECTION ----*/
+
+
+.main__productos-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/*---- PRODUCTOS ENDS ----*/
+
 
 /*----- VENTAS SECTION -----*/
 
