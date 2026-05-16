@@ -1,0 +1,128 @@
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --background: #0f172a;
+  --card-bg: #1e293b;
+  --input-bg: #334155;
+
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+
+  --border: rgba(255,255,255,0.1);
+  --shadow: rgba(0,0,0,0.4);
+}
+
+div, input,header,button,body,a{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main__wrapper{
+    background-color: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 410px;
+    height: 499px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--shadow);
+    padding: 31px;
+}
+.login__wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    
+    a{
+        color: var(--primary);
+        text-decoration: none;
+    }
+    
+    h1{
+    font-size: 24px;
+    color: var(--text-primary);
+    margin: 0;
+
+}
+
+    p{
+    font-size: 17px;
+    color: var(--text-secondary);
+    }
+}
+
+.login__form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 18px;
+
+    label{
+        font-size: 14px;
+        color: var(--text-primary);
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            background-color: var(--input-bg);
+            color: var(--text-primary);
+        }
+    }
+    .btn{
+        padding: 10px;
+        border: 1px solid var(--text-secondary)  ;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+.check__remed{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+
+    label{
+        font-size: 14px;
+        color: var(--text-primary);
+        display: flex;
+        align-items: center;
+
+        input {
+            margin-right: 5px;
+        }
+    }
+
+    a{
+        font-size: 14px;
+        color: var(--primary);
+        text-decoration: none;
+    }
+}
+
+footer{
+    margin-top: 20px;
+
+    p{
+        font-size: 14px;
+        color: var(--text-muted);
+
+        a{
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+    }
+}
