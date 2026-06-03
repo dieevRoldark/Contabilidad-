@@ -1,8 +1,19 @@
 node_modules/
 .env
+.env.*
+Backend/.env
 Backend/data/
 Backend/scripts/
 Backend/certs/
 *.sqlite
 *.sqlite3
 deploy/certs/
+
+# Claves criptográficas y certificados — NUNCA commitear
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+Backend/src/security/*.pem
+secrets/
