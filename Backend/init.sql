@@ -1,0 +1,114 @@
+CREATE TABLE IF NOT EXISTS usuarios (
+    id VARCHAR(36) PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    intentos_fallidos INT NOT NULL DEFAULT 0,
+    bloqueado_hasta DATETIME NULL,
+    creado_en DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS productos (
+    id VARCHAR(36) PRIMARY KEY,
+    codigo VARCHAR(50) NOT NULL UNIQUE,
+    nombre VARCHAR(255) NOT NULL,
+    precio_compra DECIMAL(10,2) NOT NULL,
+    iva DECIMAL(10,2) NOT NULL,
+    precio_final_venta DECIMAL(10,2) NOT NULL,
+    creado_en DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    actualizado_en DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS clientes (
+    id VARCHAR(36) PRIMARY KEY,
+    cedula VARCHAR(50) NOT NULL UNIQUE,
+    nombre VARCHAR(255) NOT NULL,
+    telefono VARCHAR(50) DEFAULT '',
+    correo VARCHAR(255) DEFAULT '',
+    direccion TEXT DEFAULT NULL,
+    creado_en DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    actualizado_en DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS proveedores (
+    id VARCHAR(36) PRIMARY KEY,
+    nit VARCHAR(50) NOT NULL UNIQUE,
+    nombre VARCHAR(255) NOT NULL,
+    telefono VARCHAR(50) DEFAULT '',
+    correo VARCHAR(255) DEFAULT '',
+    direccion TEXT DEFAULT NULL,
+    creado_en DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    actualizado_en DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS ventas (
+    id VARCHAR(36) PRIMARY KEY,
+    cliente_id VARCHAR(36) DEFAULT 'cliente-default',
+    cliente_nombre VARCHAR(255) NOT NULL DEFAULT 'Cliente General',
+    estado VARCHAR(50) NOT NULL DEFAULT 'pendiente',
+    items JSON NOT NULL,
+    subtotal DECIMAL(10,2) NOT NULL DEFAULT 0,
+    total_iva DECIMAL(10,2) NOT NULL DEFAULT 0,
+    total DECIMAL(10,2) NOT NULL DEFAULT 0,
+    creado_en DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    actualizado_en DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS facturas (
+    id VARCHAR(36) PRIMARY KEY,
+    proveedor_nit VARCHAR(50) DEFAULT '',
+    proveedor_nombre VARCHAR(255) DEFAULT '',
+    numero_factura VARCHAR(100) DEFAULT '',
+    fecha VARCHAR(50) DEFAULT '',
+    estado VARCHAR(50) NOT NULL DEFAULT 'pendiente',
+    items JSON NOT NULL,
+    subtotal DECIMAL(10,2) NOT NULL DEFAULT 0,
+    total_iva DECIMAL(10,2) NOT NULL DEFAULT 0,
+    total DECIMAL(10,2) NOT NULL DEFAULT 0,
+    creado_en DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    actualizado_en DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS perfiles (
+    user_id VARCHAR(36) PRIMARY KEY,
+    personal JSON NOT NULL,
+    negocio JSON NOT NULL,
+    foto TEXT DEFAULT NULL,
+    FOREIGN KEY (user_id) REFERENCES usuarios(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS sesiones_activas (
+    id VARCHAR(36) PRIMARY KEY,
+    usuario_id VARCHAR(36) NOT NULL,
+    refresh_token_hash VARCHAR(255) NOT NULL,
+    user_agent VARCHAR(500) DEFAULT '',
+    ip_address VARCHAR(45) DEFAULT '',
+    creado_en DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    expira_en DATETIME NOT NULL,
+    revocada_en DATETIME NULL,
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE,
+    INDEX idx_sesiones_usuario (usuario_id),
+    INDEX idx_sesiones_token (refresh_token_hash)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS configuraciones (
+    user_id VARCHAR(36) PRIMARY KEY,
+    reportes JSON NOT NULL,
+    notificaciones JSON NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES usuarios(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS logs_actividad (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    usuario_id VARCHAR(36) NULL,
+    accion VARCHAR(100) NOT NULL,
+    entidad VARCHAR(50) DEFAULT '',
+    entidad_id VARCHAR(36) DEFAULT NULL,
+    detalle JSON DEFAULT NULL,
+    ip_address VARCHAR(45) DEFAULT '',
+    user_agent VARCHAR(500) DEFAULT '',
+    creado_en DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    INDEX idx_logs_usuario (usuario_id),
+    INDEX idx_logs_accion (accion),
+    INDEX idx_logs_creado (creado_en)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
