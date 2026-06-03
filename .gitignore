@@ -1,0 +1,8 @@
+node_modules/
+.env
+Backend/data/
+Backend/scripts/
+Backend/certs/
+*.sqlite
+*.sqlite3
+deploy/certs/
