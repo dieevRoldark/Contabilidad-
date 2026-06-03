@@ -1,0 +1,83 @@
+                <div>
+                    <header class="main__header-all">
+
+                            <div class="main__header-desc">
+                                <h2>Ventas</h2>
+                                <p>Puedes gestionar tus ventas desde el sigueinte panel</p>
+                            </div>
+
+                            <div class="main__button-cont" role="group" aria-label="Acciones de ventas">
+                                <button id="btn-ventas-pendientes" class="main__button-all" style="background-color: var(--success);" type="button" aria-pressed="true">Pendientes</button>
+                                <button id="btn-nueva-venta" class="main__button-all" type="button">Nueva venta</button>
+                            </div>
+                    </header>
+
+                    <div class="main__sales-wrapper">
+                        <section id="venta-form-wrapper" class="sales__form-wrapper" aria-label="Formulario para registrar productos de venta" hidden>
+                            <form id="venta-form" class="sales__form" novalidate>
+                                <input id="venta-item-id" name="itemId" type="hidden">
+
+                                <div>
+                                    <label for="venta-barcode">Código de barras</label>
+                                    <input id="venta-barcode" name="barcode" type="text" placeholder="Escanea el código de barras" inputmode="numeric" autocomplete="off">
+                                </div>
+                                <div>
+                                    <label for="venta-product-name">Producto</label>
+                                    <input id="venta-product-name" name="productName" type="text" placeholder="Nombre del producto" autocomplete="off">
+                                </div>
+                                <div>
+                                    <label for="venta-quantity">Cantidad</label>
+                                    <input id="venta-quantity" name="quantity" type="number" placeholder="0" min="1" step="1" inputmode="numeric">
+                                </div>
+                                <div>
+                                    <label for="venta-unit-price">Precio unitario</label>
+                                    <input id="venta-unit-price" name="unitPrice" type="text" placeholder="$0.00" inputmode="decimal" aria-label="Precio unitario en formato decimal">
+                                </div>
+                                <div>
+                                    <button class="main__button-all" type="submit">Agregar Producto</button>
+                                </div>
+                                
+                            </form>
+                        </section>
+
+                        <p id="venta-form-mensaje" class="product__message" role="status" aria-live="polite"></p>
+
+                        <section id="ventas-pendientes-wrapper" aria-label="Listado de facturas pendientes">
+                            <footer class="footer__table-cont2">
+                                <table id="tabla-ventas-pendientes" class="footer__table2" aria-label="Facturas de ventas pendientes">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Fecha</th>
+                                            <th scope="col">Cliente</th>
+                                            <th scope="col">Items</th>
+                                            <th scope="col">Total</th>
+                                            <th scope="col">Ver</th>
+                                            <th scope="col">Anular</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </footer>
+                        </section>
+
+                        <footer class="footer__table-cont2">
+                            <table id="tabla-venta-items" class="footer__table2" aria-label="Listado de productos agregados a la venta" hidden>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Codigo</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Iva</th>
+                                        <th scope="col">Precio + iva</th>
+                                        <th scope="col">Editar</th>
+                                        <th scope="col">Borrar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </footer>
+                    </div>
+                </div>

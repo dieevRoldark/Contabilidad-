@@ -1,0 +1,115 @@
+                <div>
+                    <h1 style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">Facturación</h1>
+                    <div>
+                        <header class="main__header-all">
+
+                            <div class="main__header-desc">
+                                <h2 data-focus-start>Facturación</h2>
+                                <p>Puedes gestionar tus facturas desde el siguiente panel</p>
+                            </div>
+
+                            <div class="main__button-cont" role="group" aria-label="Acciones de facturas">
+                                <button id="btn-facturas-pendientes" class="main__button-all" style="background-color: var(--success);" type="button" aria-pressed="true">Pendientes</button>
+                                <button id="btn-nueva-factura" class="main__button-all" type="button">Nueva factura</button>
+                            </div>
+                        </header>
+
+                        <div class="main__sales-wrapper">
+
+                            <section id="factura-info-wrapper" class="fact__info-wraper" aria-label="Datos del proveedor" hidden>
+                                <form id="factura-info-form" class="fact__form" novalidate>
+                                    <input id="factura-edit-id" name="id" type="hidden">
+
+                                    <div>
+                                        <label for="factura-nit">Nit</label>
+                                        <input id="factura-nit" name="nit" type="text" placeholder="Nit del proveedor" autocomplete="off">
+                                    </div>
+                                    <div>
+                                        <label for="factura-proveedor-nombre">Nombre tercero</label>
+                                        <input id="factura-proveedor-nombre" name="proveedorNombre" type="text" placeholder="Nombre del proveedor" autocomplete="off">
+                                    </div>
+                                    <div>
+                                        <label for="factura-numero">Nº Factura</label>
+                                        <input id="factura-numero" name="numeroFactura" type="text" placeholder="Número de factura" autocomplete="off">
+                                    </div>
+                                    <div>
+                                        <label for="factura-fecha">Fecha</label>
+                                        <input id="factura-fecha" name="fecha" type="date">
+                                    </div>
+                                </form>
+                            </section>
+
+                            <section id="factura-items-wrapper" class="fact__info-wraper" aria-label="Formulario para registrar productos de la factura" hidden>
+                                <form id="factura-items-form" class="fact__form" novalidate>
+                                    <input id="factura-item-id" name="itemId" type="hidden">
+
+                                    <div>
+                                        <label for="factura-codigo">Código de barras</label>
+                                        <input id="factura-codigo" name="codigo" type="text" placeholder="Código del producto" autocomplete="off">
+                                    </div>
+                                    <div>
+                                        <label for="factura-producto-nombre">Producto</label>
+                                        <input id="factura-producto-nombre" name="productoNombre" type="text" placeholder="Nombre del producto" autocomplete="off">
+                                    </div>
+                                    <div>
+                                        <label for="factura-iva">Iva</label>
+                                        <input id="factura-iva" name="iva" type="number" placeholder="0" min="0" step="0.01">
+                                    </div>
+                                    <div>
+                                        <label for="factura-costo">Costo</label>
+                                        <input id="factura-costo" name="costo" type="text" placeholder="$0.00" inputmode="decimal">
+                                    </div>
+                                    <div>
+                                        <label for="factura-cantidad">Cantidad</label>
+                                        <input id="factura-cantidad" name="cantidad" type="number" placeholder="0" min="1" step="1" inputmode="numeric">
+                                    </div>
+                                    <div>
+                                        <button class="main__button-all" type="submit">Agregar Producto</button>
+                                    </div>
+                                </form>
+                            </section>
+
+                            <p id="factura-form-mensaje" class="product__message" role="status" aria-live="polite"></p>
+
+                            <section id="facturas-pendientes-wrapper" aria-label="Listado de facturas pendientes">
+                                <footer class="footer__table-cont2">
+                                    <table id="tabla-facturas-pendientes" class="footer__table2" aria-label="Facturas de compra pendientes">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Fecha</th>
+                                                <th scope="col">Nº Factura</th>
+                                                <th scope="col">Proveedor</th>
+                                                <th scope="col">Items</th>
+                                                <th scope="col">Total</th>
+                                                <th scope="col">Ver</th>
+                                                <th scope="col">Anular</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                </footer>
+                            </section>
+
+                            <footer class="footer__table-cont2">
+                                <table id="tabla-factura-items" class="footer__table2" aria-label="Listado de productos agregados a la factura" hidden>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Codigo</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Cantidad</th>
+                                            <th scope="col">Costo</th>
+                                            <th scope="col">Iva</th>
+                                            <th scope="col">Costo + iva</th>
+                                            <th scope="col">Editar</th>
+                                            <th scope="col">Borrar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </footer>
+
+                        </div>
+                    </div>
+                </div>
